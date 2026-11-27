@@ -1,0 +1,23 @@
+🚀 CloudSim Router 초기화 중 (모드: EAGER, CACHE-AWARE)...
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+⚠️ v6 P90 is diagnostic only: held-out BERT/RoBERTa coverage is not yet calibrated to 90%.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+[LightGBM] [Warning] Ignoring unrecognized parameter 'bagging_by_query' found in model string.
+{
+  "graph_metadata": "/home/ubuntu/g6_xlarge_final_validation_v1/results/g6_xlarge_final_fixed_v1/ppt_example/opt125m_graph_metadata.json",
+  "operation_sequence": "/home/ubuntu/g6_xlarge_final_validation_v1/results/g6_xlarge_final_fixed_v1/ppt_example/opt125m_operation_sequence.csv",
+  "linear_example_json": "/home/ubuntu/g6_xlarge_final_validation_v1/results/g6_xlarge_final_fixed_v1/ppt_example/opt125m_ffn_linear_example.json",
+  "linear_example_markdown": "/home/ubuntu/g6_xlarge_final_validation_v1/results/g6_xlarge_final_fixed_v1/ppt_example/opt125m_ffn_linear_example.md",
+  "prefill_operations": 278,
+  "decode_operations": 258
+}

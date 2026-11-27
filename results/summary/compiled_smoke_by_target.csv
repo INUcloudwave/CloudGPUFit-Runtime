@@ -1,0 +1,8 @@
+﻿target,mode,scope,group,conditions,success,oom,failed,mape_percent,median_ape_percent,bias_percent
+g4dn.xlarge,compiled,smoke,all,13,13,0,0,17.4792,10.9216,-4.6311
+g5.xlarge,compiled,smoke,all,13,13,0,0,14.9685,10.1522,-7.1045
+g6.xlarge,compiled,smoke,all,13,13,0,0,16.5192,11.4839,-11.5379
+g6e.xlarge,compiled,smoke,all,13,13,0,0,16.1143,8.5329,-4.9784
+g7.2xlarge,compiled,smoke,all,13,13,0,0,21.1058,15.7957,-18.5848
+g7e.2xlarge,compiled,smoke,all,13,13,0,0,19.1249,14.0709,-11.7223
+all,compiled,smoke,all,78,78,0,0,17.552,10.5369,-9.7598

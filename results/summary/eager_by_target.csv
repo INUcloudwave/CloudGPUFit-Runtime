@@ -1,0 +1,8 @@
+﻿target,mode,scope,group,conditions,success,oom,failed,mape_percent,median_ape_percent,bias_percent
+g4dn.xlarge,eager,full,all,470,427,43,0,15.135,13.1297,6.3909
+g5.xlarge,eager,full,all,470,446,24,0,13.7295,11.5616,6.8555
+g6.xlarge,eager,full,all,470,446,24,0,13.22,8.6114,0.4851
+g6e.xlarge,eager,full,all,470,461,9,0,14.7871,12.0542,3.7482
+g7.2xlarge,eager,full,all,470,454,16,0,17.1135,12.7456,4.8549
+g7e.2xlarge,eager,full,all,470,470,0,0,17.2373,16.2075,5.2578
+all,eager,full,all,2820,2704,116,0,15.2256,12.5751,4.588

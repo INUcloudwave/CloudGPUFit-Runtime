@@ -1,0 +1,152 @@
+{
+  "target": "g6.xlarge",
+  "actual_success_rows": 446,
+  "comparison_rows": 446,
+  "failed_prediction_rows": 0,
+  "operation_family_lightgbm": {
+    "integrated_lightgbm_mape_percent": 43.99396576706662,
+    "family_lightgbm_mape_percent": 25.574765666222522,
+    "improvement_percentage_points": 18.419200100844098,
+    "downstream_decode_and_vision_ridge": "disabled for both variants"
+  },
+  "cpu_gpu_scheduling": {
+    "naive_sum_mape_percent": 59.77272866696061,
+    "overlap_mape_percent": 15.947898849470052,
+    "improvement_percentage_points": 43.82482981749056
+  },
+  "runtime_reproduction": {
+    "compared_rows": 470,
+    "mean_absolute_difference_ms": 0.0,
+    "max_absolute_difference_ms": 0.0
+  },
+  "metrics": [
+    {
+      "scope": "전체",
+      "variant": "integrated_lightgbm",
+      "rows": 446,
+      "mape_percent": 43.99396576706662,
+      "median_ape_percent": 43.232189384213534,
+      "bias_percent": -43.99396576706662
+    },
+    {
+      "scope": "전체",
+      "variant": "family_lightgbm",
+      "rows": 446,
+      "mape_percent": 25.574765666222522,
+      "median_ape_percent": 23.501436076967984,
+      "bias_percent": -19.05073455437592
+    },
+    {
+      "scope": "전체",
+      "variant": "cpu_gpu_naive_sum",
+      "rows": 446,
+      "mape_percent": 59.77272866696061,
+      "median_ape_percent": 57.015147136745085,
+      "bias_percent": 47.59500918889949
+    },
+    {
+      "scope": "전체",
+      "variant": "cpu_gpu_overlap",
+      "rows": 446,
+      "mape_percent": 15.947898849470052,
+      "median_ape_percent": 9.378451773460352,
+      "bias_percent": -7.368263386665079
+    },
+    {
+      "scope": "llm",
+      "variant": "integrated_lightgbm",
+      "rows": 257,
+      "mape_percent": 40.32416073452609,
+      "median_ape_percent": 41.829125726966076,
+      "bias_percent": -40.32416073452609
+    },
+    {
+      "scope": "llm",
+      "variant": "family_lightgbm",
+      "rows": 257,
+      "mape_percent": 20.173862382857592,
+      "median_ape_percent": 18.102698596331685,
+      "bias_percent": -11.419335344123816
+    },
+    {
+      "scope": "llm",
+      "variant": "cpu_gpu_naive_sum",
+      "rows": 257,
+      "mape_percent": 62.64129922239328,
+      "median_ape_percent": 57.67042306218604,
+      "bias_percent": 61.45327368862021
+    },
+    {
+      "scope": "llm",
+      "variant": "cpu_gpu_overlap",
+      "rows": 257,
+      "mape_percent": 11.284348837529704,
+      "median_ape_percent": 9.157003923175981,
+      "bias_percent": -0.3425209427910863
+    },
+    {
+      "scope": "text_encoder_decoder",
+      "variant": "integrated_lightgbm",
+      "rows": 124,
+      "mape_percent": 42.6929645883928,
+      "median_ape_percent": 42.890844417893476,
+      "bias_percent": -42.6929645883928
+    },
+    {
+      "scope": "text_encoder_decoder",
+      "variant": "family_lightgbm",
+      "rows": 124,
+      "mape_percent": 25.904483659220343,
+      "median_ape_percent": 26.639870224432343,
+      "bias_percent": -20.583480216244524
+    },
+    {
+      "scope": "text_encoder_decoder",
+      "variant": "cpu_gpu_naive_sum",
+      "rows": 124,
+      "mape_percent": 65.35931918149508,
+      "median_ape_percent": 66.89693483451668,
+      "bias_percent": 63.62217957320766
+    },
+    {
+      "scope": "text_encoder_decoder",
+      "variant": "cpu_gpu_overlap",
+      "rows": 124,
+      "mape_percent": 9.70305124694346,
+      "median_ape_percent": 3.6607695902825936,
+      "bias_percent": -1.521860541595132
+    },
+    {
+      "scope": "vision_classification",
+      "variant": "integrated_lightgbm",
+      "rows": 65,
+      "mape_percent": 60.985720221196914,
+      "median_ape_percent": 63.40495904291331,
+      "bias_percent": -60.985720221196914
+    },
+    {
+      "scope": "vision_classification",
+      "variant": "family_lightgbm",
+      "rows": 65,
+      "mape_percent": 46.3001058615003,
+      "median_ape_percent": 49.891854387417936,
+      "bias_percent": -46.3001058615003
+    },
+    {
+      "scope": "vision_classification",
+      "variant": "cpu_gpu_naive_sum",
+      "rows": 65,
+      "mape_percent": 37.77334625852261,
+      "median_ape_percent": 38.43508962425093,
+      "bias_percent": -37.77334625852261
+    },
+    {
+      "scope": "vision_classification",
+      "variant": "cpu_gpu_overlap",
+      "rows": 65,
+      "mape_percent": 46.3001058615003,
+      "median_ape_percent": 49.891854387417936,
+      "bias_percent": -46.3001058615003
+    }
+  ]
+}

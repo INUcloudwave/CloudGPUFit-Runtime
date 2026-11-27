@@ -1,0 +1,49 @@
+{
+  "target": "g7.2xlarge",
+  "measurement": "single_decode_cuda_event",
+  "warmup": 1,
+  "iterations": 3,
+  "batches": [
+    1,
+    8,
+    16,
+    32,
+    128
+  ],
+  "cache_lengths": [
+    128,
+    256,
+    512,
+    1023
+  ],
+  "status_counts": {
+    "ok": 80
+  },
+  "model_status_counts": {
+    "gpt2": {
+      "ok": 20
+    },
+    "tinyllama-1.1b": {
+      "ok": 20
+    },
+    "qwen2.5-1.5b": {
+      "ok": 20
+    },
+    "opt-125m": {
+      "ok": 20
+    }
+  },
+  "ridge_training_models": [
+    "gpt2",
+    "qwen2.5-1.5b",
+    "tinyllama-1.1b"
+  ],
+  "ridge_application_models": [
+    "opt-125m",
+    "tinyllama-1.1b",
+    "qwen2.5-1.5b",
+    "gpt2",
+    "gpt2-medium",
+    "gpt2-xl"
+  ]
+}

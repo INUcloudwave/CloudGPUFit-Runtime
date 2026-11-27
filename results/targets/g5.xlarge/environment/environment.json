@@ -1,0 +1,8 @@
+{
+  "python": "3.13.18",
+  "torch": "2.13.0+cu130",
+  "transformers": "4.45.1",
+  "cuda_runtime": "13.0",
+  "gpu": "NVIDIA A10G",
+  "bf16_supported": true
+}

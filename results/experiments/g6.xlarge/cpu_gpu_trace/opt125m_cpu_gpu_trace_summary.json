@@ -1,0 +1,113 @@
+{
+  "environment": {
+    "gpu": "NVIDIA L4",
+    "torch": "2.13.0+cu130",
+    "model": "facebook/opt-125m",
+    "batch_size": 8,
+    "input_length": 512,
+    "dtype": "fp16"
+  },
+  "unprofiled_timing": {
+    "cuda_event_elapsed_ms": 50.66239929199219,
+    "synchronized_wall_ms": 50.715957
+  },
+  "profiled_diagnostic": {
+    "cpu_operator_self_time_ms": 48.394725000000044,
+    "gpu_kernel_self_time_ms": 95.72561400000008,
+    "naive_cpu_plus_gpu_ms": 144.12033900000011,
+    "note": "Profiler CPU/GPU 합계는 오버랩을 중복 계산하는 진단값이며 E2E MAPE 계산에는 사용하지 않는다."
+  },
+  "top_gpu_operations": [
+    {
+      "operation": "aten::addmm",
+      "calls": 72,
+      "self_cpu_ms": 1.5344980000000368,
+      "self_gpu_ms": 9.83524199999999
+    },
+    {
+      "operation": "aten::copy_",
+      "calls": 78,
+      "self_cpu_ms": 0.6535029999999988,
+      "self_gpu_ms": 9.283378
+    },
+    {
+      "operation": "void at::native::vectorized_elementwise_kernel<4, at::native::float16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::float16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>)",
+      "calls": 13,
+      "self_cpu_ms": 0.0,
+      "self_gpu_ms": 7.833976000000013
+    },
+    {
+      "operation": "aten::_softmax",
+      "calls": 12,
+      "self_cpu_ms": 0.11168400000001293,
+      "self_gpu_ms": 7.596857
+    },
+    {
+      "operation": "void (anonymous namespace)::softmax_warp_forward<c10::Half, float, float, 9, false, false, 32>(float*, c10::Half const*, int, int, int, bool const*, int, bool)",
+      "calls": 12,
+      "self_cpu_ms": 0.0,
+      "self_gpu_ms": 7.596857
+    },
+    {
+      "operation": "aten::add",
+      "calls": 39,
+      "self_cpu_ms": 0.4588610000000167,
+      "self_gpu_ms": 6.774873000000022
+    },
+    {
+      "operation": "ampere_fp16_s1688gemm_fp16_128x128_ldg8_relu_f2f_tn",
+      "calls": 60,
+      "self_cpu_ms": 0.0,
+      "self_gpu_ms": 6.733177999999993
+    },
+    {
+      "operation": "aten::bmm",
+      "calls": 24,
+      "self_cpu_ms": 1.0354910000000228,
+      "self_gpu_ms": 6.087139000000007
+    },
+    {
+      "operation": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::Half> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::Half> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::Half> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::Half> const&)::{lambda(int)#1})",
+      "calls": 12,
+      "self_cpu_ms": 0.0,
+      "self_gpu_ms": 5.727745000000001
+    },
+    {
+      "operation": "aten::maximum",
+      "calls": 12,
+      "self_cpu_ms": 0.18155499999998664,
+      "self_gpu_ms": 5.201254000000009
+    },
+    {
+      "operation": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::BinaryFunctor<c10::Half, c10::Half, c10::Half, at::native::maximum_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#3}::operator()() const::{lambda(c10::Half, c10::Half)#1}> >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::Half, c10::Half, c10::Half, at::native::maximum_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#3}::operator()() const::{lambda(c10::Half, c10::Half)#1}> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::BinaryFunctor<c10::Half, c10::Half, c10::Half, at::native::maximum_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#3}::operator()() const::{lambda(c10::Half, c10::Half)#1}> >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::Half, c10::Half, c10::Half, at::native::maximum_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#3}::operator()() const::{lambda(c10::Half, c10::Half)#1}> const&)::{lambda(int)#1})",
+      "calls": 12,
+      "self_cpu_ms": 0.0,
+      "self_gpu_ms": 5.201254000000009
+    },
+    {
+      "operation": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_f16_s161616gemm_f16_32x32_128x1_nn_align8>(cutlass_80_wmma_tensorop_f16_s161616gemm_f16_32x32_128x1_nn_align8::Params)",
+      "calls": 12,
+      "self_cpu_ms": 0.0,
+      "self_gpu_ms": 4.062058000000004
+    },
+    {
+      "operation": "ampere_fp16_s1688gemm_fp16_128x128_ldg8_relu_f2f_stages_32x1_tn",
+      "calls": 12,
+      "self_cpu_ms": 0.0,
+      "self_gpu_ms": 3.0904799999999977
+    },
+    {
+      "operation": "ampere_fp16_s1688gemm_fp16_128x128_ldg8_f2f_stages_32x1_tn",
+      "calls": 12,
+      "self_cpu_ms": 0.0,
+      "self_gpu_ms": 2.025081000000003
+    },
+    {
+      "operation": "aten::clamp_min",
+      "calls": 12,
+      "self_cpu_ms": 0.12786300000000575,
+      "self_gpu_ms": 1.8886960000000044
+    }
+  ],
+  "chrome_trace": "/home/ubuntu/g6_final_evidence_v1/results/g6_xlarge_final_evidence_v1/cpu_gpu_trace/opt125m_prefill_cpu_gpu_trace.json"
+}

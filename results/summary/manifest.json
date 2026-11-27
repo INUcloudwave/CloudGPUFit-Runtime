@@ -1,0 +1,41 @@
+{
+  "eager": {
+    "target": "all",
+    "mode": "eager",
+    "scope": "full",
+    "group": "all",
+    "conditions": 2820,
+    "success": 2704,
+    "oom": 116,
+    "failed": 0,
+    "mape_percent": 15.2256,
+    "median_ape_percent": 12.5751,
+    "bias_percent": 4.588
+  },
+  "compiled_smoke": {
+    "target": "all",
+    "mode": "compiled",
+    "scope": "smoke",
+    "group": "all",
+    "conditions": 78,
+    "success": 78,
+    "oom": 0,
+    "failed": 0,
+    "mape_percent": 17.552,
+    "median_ape_percent": 10.5369,
+    "bias_percent": -9.7598
+  },
+  "targets": [
+    "g4dn.xlarge",
+    "g5.xlarge",
+    "g6.xlarge",
+    "g6e.xlarge",
+    "g7.2xlarge",
+    "g7e.2xlarge"
+  ],
+  "metric_definition": {
+    "APE_percent": "abs(predicted-actual)/actual*100",
+    "MAPE_percent": "mean APE over comparison_status=ok rows",
+    "Bias_percent": "mean((predicted-actual)/actual*100) over comparison_status=ok rows"
+  }
+}

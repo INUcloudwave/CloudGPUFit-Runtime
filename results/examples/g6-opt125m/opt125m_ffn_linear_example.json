@@ -1,0 +1,72 @@
+{
+  "request": {
+    "instance": "g6.xlarge",
+    "model": "facebook/opt-125m",
+    "batch_size": 8,
+    "input_length": 512,
+    "output_length": 128,
+    "dtype": "FP16"
+  },
+  "selected_operation": {
+    "description": "첫 번째 Transformer block의 FFN 확장 Linear",
+    "phase": "prefill",
+    "operation_order": 41,
+    "module_path": "backbone.decoder.layers.0.fc1",
+    "input_tensors": [
+      {
+        "node": "layer_norm_1",
+        "shape": [
+          4096,
+          768
+        ],
+        "dtype": "float16",
+        "elements": 3145728
+      },
+      {
+        "node": "p_backbone_decoder_layers_0_fc1_weight",
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "float16",
+        "elements": 2359296
+      },
+      {
+        "node": "p_backbone_decoder_layers_0_fc1_bias",
+        "shape": [
+          3072
+        ],
+        "dtype": "float16",
+        "elements": 3072
+      }
+    ],
+    "output_tensor": {
+      "node": "linear_4",
+      "shape": [
+        4096,
+        3072
+      ],
+      "dtype": "float16",
+      "elements": 12582912
+    },
+    "M": 4096,
+    "N": 3072,
+    "K": 768
+  },
+  "calculation": {
+    "flops_formula": "2 × M × N × K",
+    "flops": 19327352832,
+    "flops_giga": 19.327352832,
+    "memory_formula_without_bias": "(M × K + K × N + M × N) × 2 bytes",
+    "memory_bytes_without_bias": 36175872,
+    "memory_megabytes_without_bias": 36.175872,
+    "bias_bytes_used_by_predictor": 6144,
+    "memory_bytes_used_by_predictor": 36182016,
+    "compute_bound_time_ms": 0.15424862595371108,
+    "memory_bound_time_ms": 0.12056653115628124,
+    "roofline_time_ms": 0.15424862595371108,
+    "lightgbm_model": "Transformer Linear context median model",
+    "lightgbm_correction_multiplier": 2.5459097403640136,
+    "final_predicted_execution_time_ms": 0.39270307925331843
+  }
+}
